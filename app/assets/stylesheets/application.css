@@ -26,18 +26,22 @@ h1 {
   font-family: 'Press Start 2P', cursive;
   color: white;
   text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 
 h2 {
   font-family: 'Quantico', sans-serif;
+  font-size: 28px;
   color: white;
-  float: right;
+  
 }
 
 p {
   font-family: 'Quantico', sans-serif;
+  font-size: 18px;
   color: white;
-  float: right;
+  
 }
 
 .container {
@@ -48,6 +52,11 @@ p {
 
 .photo {
   float: left;
+}
+
+.text-container {
+  float: right;
+  width: 470px;
 }
 
 .clear {
