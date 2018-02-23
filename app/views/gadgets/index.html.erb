@@ -1,13 +1,26 @@
 <h1>Essential 80&rsquo;s Gadgets</h1>
 
-<h2><%= @gadget1.gadget_name %></h2>
-<p><%= @gadget1.description %></p>
-<p>Image file: <%= @gadget1.image_filename %></p>
+<div class="container">
 
-<h2><%= @gadget2.gadget_name %></h2>
-<p><%= @gadget2.description %></p>
-<p>Image file: <%= @gadget2.image_filename %></p>
+  <div class="photo">
+    <%= image_tag @gadget1.image_filename %>
+  </div>
+  <h2><%= @gadget1.gadget_name %></h2>
+  <p><%= @gadget1.description %></p>
 
-<h2><%= @gadget3.gadget_name %></h2>
-<p><%= @gadget3.description %></p>
-<p>Image file: <%= @gadget3.image_filename %></p>
+  <br class="clear" />
+
+  <div class="photo">
+    <%= image_tag @gadget2.image_filename %>
+  </div>
+  <h2><%= @gadget2.gadget_name %></h2>
+  <p><%= @gadget2.description %></p>
+
+  <br class="clear" />
+
+  <div class="photo">
+    <%= image_tag @gadget3.image_filename %>
+  </div>  
+  <h2><%= @gadget3.gadget_name %></h2>
+  <p><%= @gadget3.description %></p>
+</div>
