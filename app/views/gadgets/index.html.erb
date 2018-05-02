@@ -4,33 +4,16 @@
 
 <div class="container">
 
-  <div class="photo">
-    <%= image_tag @gadget1.image_filename %>
-  </div>
-  <div class="text-container">
-    <h2><%= @gadget1.gadget_name %></h2>
-    <p><%= @gadget1.description %></p>
-  </div>
+  <% @gadgets.each do |gadget| %>
+    <div class="photo">
+      <%= image_tag gadget.image_filename %>
+    </div>
+    <div class="text-container">
+      <h2><%= gadget.gadget_name %></h2>
+      <p><%= gadget.description %></p>
+    </div>
 
-  <br class="clear" />
-  <br />
-
-  <div class="photo">
-    <%= image_tag @gadget2.image_filename %>
-  </div>
-  <div class="text-container">
-    <h2><%= @gadget2.gadget_name %></h2>
-    <p><%= @gadget2.description %></p>
-  </div>
-
-  <br class="clear" />
-  <br />
-
-  <div class="photo">
-    <%= image_tag @gadget3.image_filename %>
-  </div>
-  <div class="text-container">
-    <h2><%= @gadget3.gadget_name %></h2>
-    <p><%= @gadget3.description %></p>
-  </div>
+    <br class="clear" />
+    <br />
+  <% end %>
 </div>
