@@ -4,4 +4,7 @@ class GadgetsController < ApplicationController
     @gadgets = Gadget.all
   end
 
+  def new
+    @gadget = Gadget.new
+  end
 end
