@@ -1,10 +1,12 @@
 <h1>Essential 80&rsquo;s Gadgets</h1>
-<br />
-
-<%= link_to 'Add A Gadget', new_gadget_path %>
-<br />
 
 <div class="container">
+    
+  <div class="links">
+    <%= link_to 'Add A Gadget', new_gadget_path, data: {toggle: 'modal', target: '#myModal'} %>
+  </div>
+
+  <br class="clear" />
 
   <% @gadgets.each do |gadget| %>
     <div class="photo">
