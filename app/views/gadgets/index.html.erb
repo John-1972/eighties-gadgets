@@ -10,7 +10,8 @@
 
   <% @gadgets.each do |gadget| %>
     <div class="photo">
-      <%= image_tag gadget.image_filename %>
+      <%= image_tag gadget.image, class: 'img-fluid' %>
+      <!-- Was gadget.image_filename -->
     </div>
     <div class="text-container">
       <h2><%= gadget.gadget_name %></h2>

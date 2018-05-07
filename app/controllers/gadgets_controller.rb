@@ -12,6 +12,6 @@ class GadgetsController < ApplicationController
   private
 
   def gadget_params # Pulls the values of gadget_name & description from the form
-    params.require(:gadget).permit(:gadget_name, :description)
+    params.require(:gadget).permit(:gadget_name, :description, :image)
   end
 end

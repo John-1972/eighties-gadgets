@@ -25,8 +25,9 @@
           </div>
           <%= simple_form_for Gadget.new do |f| %>
             <div class="modal-body">
-              <%= f.input :gadget_name %>
+              <%= f.input :gadget_name, label: "What is the name of the gadget?" %>
               <%= f.input :description %>
+              <%= f.input :image, label: "Image (Preferably about 240px high)..." %>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
