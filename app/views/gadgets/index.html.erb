@@ -11,7 +11,7 @@
   <% @gadgets.each do |gadget| %>
     <div class="photo">
       <%= image_tag gadget.image, class: 'img-fluid' %>
-      <!-- Was gadget.image_filename -->
+      <!-- Was gadget.image_filename, but no longer storing images in app/assets/images -->
     </div>
     <div class="text-container">
       <h2><%= gadget.gadget_name %></h2>
