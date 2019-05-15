@@ -10,7 +10,7 @@
 
   <% @gadgets.each do |gadget| %>
     <div class="photo">
-      <%= image_tag gadget.image, class: 'img-fluid' %>
+      <%= image_tag gadget.image.url, class: 'img-fluid' %>
       <!-- Was gadget.image_filename, but no longer storing images in app/assets/images -->
     </div>
     <div class="text-container">
