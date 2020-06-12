@@ -13,31 +13,31 @@
   </head>
 
   <body>
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
+    <!-- Modal: "Add An '80s Gadget" -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <!-- Bootstrap modal, which fades in and out -->
+      <div class="modal-dialog" role="document"> <!-- Inner container -->
+        <div class="modal-content"> <!-- Another container, actual repository for modal content -->
+          <div class="modal-header"> <!-- First of three sections -->
+            <h4 class="modal-title" id="myModalLabel">Add An &rsquo;80s Gadget</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">×</span>
-            </button>
-            <h4 class="modal-title" id="myModalLabel">Add An &rsquo;80s Gadget</h4>
-          </div>
-          <%= simple_form_for Gadget.new do |f| %>
-            <div class="modal-body">
+            </button> <!-- "x" button to close window -->
+          </div> <!-- class="modal-header" -->
+          <%= simple_form_for Gadget.new do |f| %> <!-- Rails code steps in here... -->
+            <div class="modal-body"> <!-- Second of three sections -->
               <%= f.input :gadget_name, label: "What is the name of the gadget?" %>
               <%= f.input :description %>
               <%= f.input :image, label: "Image (Preferably about 240px high)..." %>
-            </div>
-            <div class="modal-footer">
+            </div> <!-- class="modal-body" -->
+            <div class="modal-footer"> <!-- Third of three sections, contains 2 buttons -->
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               <%= f.submit 'Create', class: 'btn btn-info' %>
-            </div>
-          <% end %>
-        </div>
-      </div>
-    </div>
+            </div> <!-- class="modal-footer" -->
+          <% end %> <!-- End of Rails code -->
+        </div> <!-- class="modal-content" -->
+      </div> <!-- class="modal-dialog" -->
+    </div> <!-- class="modal fade" -->
 
-    <%= yield %>
+    <%= yield %> <!-- Insert point for page text -->
   </body>
 </html>

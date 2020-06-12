@@ -1,24 +1,25 @@
 <h1>Essential &rsquo;80s Gadgets</h1>
 
-<div class="container">
+<div class="container"> <!-- Compulsory Bootstrap container, but no rows as only 1 column -->
     
   <div class="links text-right">
     <%= link_to 'Add A Gadget', new_gadget_path, data: {toggle: 'modal', target: '#myModal'} %>
-  </div>
+  </div> <!-- class="links" -->
 
   <br class="clear" />
 
-  <% @gadgets.each do |gadget| %>
-    <div class="photo">
-      <%= image_tag gadget.image.url, class: 'img-fluid' %>
+  <% @gadgets.each do |gadget| %> <!-- Rails stepping through each gadget in the db table -->
+    <div class="photo"> <!-- Container for image -->
+      <%= image_tag gadget.image.url, class: 'img-fluid' %> <!-- Render image -->
       <!-- Was gadget.image_filename, but no longer storing images in app/assets/images -->
-    </div>
-    <div class="text-container">
-      <h2><%= gadget.gadget_name %></h2>
-      <p><%= gadget.description %></p>
-    </div>
+    </div> <!-- class="photo" -->
+    
+    <div class="text-container"> <!-- Container for text -->
+      <h2><%= gadget.gadget_name %></h2> <!-- Render name field -->
+      <p><%= gadget.description %></p> <!-- Render description field -->
+    </div> <!-- class="text-container" -->
 
     <br class="clear" />
     <br />
-  <% end %>
-</div>
+  <% end %> <!-- End of Rails code -->
+</div> <!-- class="container" -->
