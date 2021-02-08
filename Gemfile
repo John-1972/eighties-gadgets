@@ -62,6 +62,6 @@ end
 
 gem 'rack', '~> 2.2', '>= 2.2.3'
 gem 'simple_form'
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem 'figaro'
 gem 'fog-aws'
